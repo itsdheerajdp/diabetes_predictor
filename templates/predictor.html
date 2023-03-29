@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<style>
+  body{
+    margin-top: 8rem;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+
+  }
+  form{
+    color: white;
+  }
+ .btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ }
+</style>
+  </head>
+
+<body>
+    <form action="/predictor" method="POST">
+        <div class="mb-3 mt-5">
+          <label for="exampleInputEmail1" class="form-label">Number of pregnancies for female  (0 in case of male) </label>
+          <textarea type="number" step="any" name="pregnancies" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3 ">
+          <label for="exampleInputPassword1" class="form-label" >Glucose Level in Blood</label>
+          <textarea type="number" step="any" name="glucose" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3 ">
+          <label for="exampleInputPassword1" class="form-label" >Blood Pressure</label>
+          <textarea type="number" step="any" name="bp" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3 ">
+          <label for="exampleInputPassword1" class="form-label" >Skin Thickness (in mm)</label>
+          <textarea type="number" step="any" name="sknthickness" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" >Insulin Level in Blood</label>
+          <textarea type="number" step="any" name="insulin" class="form-control" required></textarea>
+        </div>  
+        <div class="mb-3 ">
+          <label for="exampleInputPassword1" class="form-label" >Body Mass Index(BMI)</label>
+          <textarea type="number" step="any" name="bmi" class="form-control" required></textarea>
+        </div> 
+        <div class="mb-3 ">
+          <label for="exampleInputPassword1" class="form-label " >Age(in years)</label>
+          <textarea type="number" step="any" name="age" class="form-control" required></textarea>
+        </div> 
+       <div class="btn"> <button type="submit" class="btn btn-primary w-100">Predict</button></div>
+
+      </form>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+
+</html>

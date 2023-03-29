@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #050801;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        button {
+            padding: 25px 30px;
+            background-color: #050801;
+            color: #03e9f4;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            letter-spacing: 4px;
+            overflow: hidden;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #03e9f4;
+            color: #050801;
+            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+        }
+        
+        p {
+            color: #fff;
+            font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
+            font-size: 1em;
+            font-weight: 700;
+        }
+        
+        p span {
+            display: inline-block;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 500;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        p span::before,
+        p span::after {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: -1px;
+            transform-origin: left top;
+            transition: all ease-out 0.3s;
+            content: attr(data-text);
+        }
+        
+        p span::before {
+            z-index: 1;
+            color: rgba(0, 0, 0, 0.2);
+            transform: scale(1.1, 1) skew(0deg, 20deg);
+        }
+        
+        p span::after {
+            z-index: 2;
+            color: #e7d96c;
+            text-shadow: -1px 0 1px #131118, 1px 0 1px rgba(0, 0, 0, 0.8);
+            transform: rotateY(-40deg);
+        }
+       .heading2 p span::after {
+            z-index: 2;
+            color: #57555c;
+            text-shadow: -1px 0 1px #d7c476, 1px 0 1px rgba(0, 0, 0, 0.8);
+            transform: rotateY(-40deg);
+        }
+        
+        p span:hover::before {
+            transform: scale(1.1, 1) skew(0deg, 5deg);
+        }
+        
+        p span:hover::after {
+            transform: rotateY(-10deg);
+        }
+        
+        p span+span {
+            margin-left: 0.3em;
+        }
+        
+        @media (min-width: 20em) {
+            p {
+                font-size: 2em;
+            }
+            p span::before,
+            p span::after {
+                display: block;
+            }
+        }
+
+        @media (min-width: 30em) {
+            p {
+                font-size: 2.5em;
+            }
+        }
+        
+        @media (min-width: 40em) {
+            p {
+                font-size: 4em;
+            }
+        }
+        
+        @media (min-width: 60em) {
+            p {
+                font-size: 6em;
+            }
+        }
+        
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          
+        }
+        .heading2{
+            margin-bottom: 5rem;
+        }
+        .button button{font-size: 1.8rem;}
+    </style>
+    <title>Diabetes predictor</title>
+</head>
+
+<body>
+  <div class="heading">
+    <p aria-label="CodePen">
+        <span data-text="D">D</span>
+        <span data-text="I">I</span>
+        <span data-text="A">A</span>
+        <span data-text="B">B</span>
+        <span data-text="E">E</span>
+        <span data-text="T">T</span>
+        <span data-text="E">E</span>
+        <span data-text="S">S</span>
+
+    </p>
+
+  </div>
+  <div class="heading2">
+    <p aria-label="CodePen">
+        <span data-text="P">P</span>
+        <span data-text="R">R</span>
+        <span data-text="E">E</span>
+        <span data-text="D">D</span>
+        <span data-text="I">I</span>
+        <span data-text="C">C</span>
+        <span data-text="T">T</span>
+        <span data-text="O">O</span>
+        <span data-text="R">R</span>
+
+
+    </p>
+
+  </div>
+   <div class="button">
+    <a href="/predictor"><button>
+        Go to predictor
+      </button></a>
+   </div>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+gunicorn
+sklearn
+flask
+pickle
