@@ -1,4 +1,3 @@
 gunicorn
 sklearn
 flask
-pickle
