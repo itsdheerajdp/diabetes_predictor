@@ -34,5 +34,5 @@ To use the application, navigate to `http://127.0.0.1:5000/` in your web browser
 ## Contributing
 
 We welcome contributions from anyone. 
-
+<u>
 ## check out [Diabetes Predictor](https://dmdiabetespredictor.onrender.com)
