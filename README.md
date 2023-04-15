@@ -17,7 +17,22 @@ Diabetes Predictor is a web application that predicts whether a patient has diab
 
 1. Clone the repository <br>
 `git clone https://github.com/itsdheerajdp/diabetes_predictor.git`
-2. 2. Navigate to the project directory
+2. Navigate to the project directory <br>
 `cd diabetes_predictor`
+3. Install the dependencies <br>
+`pip install -r requirements.txt`
+4. Run the application <br>
+`python app.py`
+
+## Usage
+
+To use the application, navigate to `http://127.0.0.1:5000/` in your web browser.
+
+- Enter the required parameters in the input fields and click on the "Predict" button to get the result.
+- The result will be displayed on the screen as "Yes" or "No".
+
+## Contributing
+
+We welcome contributions from anyone. 
 
 ## check out [Diabetes Predictor](https://dmdiabetespredictor.onrender.com)
